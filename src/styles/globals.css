@@ -56,6 +56,10 @@
   @apply px-16 py-[.75rem] font-overlock text-btn-2 text-neutral-900;
 }
 
+.btn-xs {
+  @apply px-8 py-2 font-overlock text-btn-1 text-neutral-900;
+}
+
 .link {
   @apply text-neutral-900 hover:text-link hover:underline dark:text-neutral-50;
 }
@@ -77,8 +81,8 @@ body {
 
 /* Hamburger Menu */
 .hamburger-bar {
-  width: 60px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -88,22 +92,19 @@ body {
   -moz-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  cursor: pointer;
-  transform: scale(0.5);
 }
 .hamburger-bar span {
   display: block;
   position: absolute;
-  height: 6px;
-  width: 100%;
-  /* background: #d3531a; */
+  height: 1px;
+  width: 16px;
   border-radius: 9px;
   opacity: 1;
-  left: 0;
+  left: 50%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
-  transform: rotate(0deg);
+  transform: rotate(0deg) translate(-50%, -50%);
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
@@ -111,7 +112,7 @@ body {
 }
 
 .hamburger-bar span:nth-child(1) {
-  top: 0px;
+  top: 14.5px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -119,7 +120,7 @@ body {
 }
 
 .hamburger-bar span:nth-child(2) {
-  top: 18px;
+  top: 19.5px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -127,7 +128,7 @@ body {
 }
 
 .hamburger-bar span:nth-child(3) {
-  top: 36px;
+  top: 24.5px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
@@ -139,8 +140,9 @@ body {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: -3px;
-  left: 8px;
+  top: 13.5px;
+  width: 16.97px;
+  left: 35%;
 }
 
 .hamburger-bar.open span:nth-child(2) {
@@ -153,6 +155,7 @@ body {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 39px;
-  left: 8px;
+  top: 25.5px;
+  width: 16.97px;
+  left: 35%;
 }
