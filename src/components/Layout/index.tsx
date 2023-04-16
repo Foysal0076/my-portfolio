@@ -8,13 +8,33 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className='relative flex min-h-screen flex-col bg-white dark:bg-neutral-900'>
-      <div className=''>
-        <Navbar />
-        {children}
+    <div className='relative'>
+      <div className='relative z-30 flex min-h-screen flex-col'>
+        <div className=''>
+          <Navbar />
+          {children}
+        </div>
+        <div className='mt-auto w-full'>
+          <Footer />
+        </div>
       </div>
-      <div className='mt-auto w-full'>
-        <Footer />
+
+      <div className='absolute inset-0 z-10 h-full w-full border border-red-500 bg-white dark:bg-neutral-900'>
+        <div className='lines max-w-7xl bg-white dark:bg-neutral-900'>
+          {/* Left side lines */}
+          <div className='line hidden lg:block' />
+          <div className='line' />
+          <div className='line hidden lg:block' />
+          <div className='line hidden lg:block' />
+          <div className='line ' />
+
+          {/* Right side lines */}
+          <div className='line hidden lg:block' />
+          <div className='line' />
+          <div className='line hidden lg:block' />
+          <div className='line hidden lg:block' />
+          <div className='line' />
+        </div>
       </div>
     </div>
   )
