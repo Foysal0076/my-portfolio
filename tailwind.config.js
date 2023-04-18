@@ -2,6 +2,7 @@
 module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{jsx,tsx}'],
+  important: true,
   theme: {
     extend: {
       container: {
@@ -35,6 +36,22 @@ module.exports = {
           {
             lineHeight: '1.75rem',
             fontWeight: '500',
+            letterSpacing: '.15px',
+          },
+        ],
+        'subtitle-2': [
+          '.875rem',
+          {
+            lineHeight: '1.125rem',
+            fontWeight: '700',
+            letterSpacing: '.1px',
+          },
+        ],
+        'body-2': [
+          '.875rem',
+          {
+            lineHeight: '1.25rem',
+            fontWeight: '400',
           },
         ],
       },

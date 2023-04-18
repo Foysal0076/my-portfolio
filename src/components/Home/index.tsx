@@ -1,7 +1,10 @@
+import HeroSection from '@/components/Home/HeroSection'
+
 const HomeBlock = () => {
   return (
     <div>
       {/* Hero Section */}
+      <HeroSection />
       {/* Hero section contact */}
       {/* About me */}
       {/* Basic overview cards */}

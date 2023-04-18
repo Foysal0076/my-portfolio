@@ -3,16 +3,16 @@ import { useMemo } from 'react'
 
 type Props = {
   size?: 'xs' | 'sm' | 'md' | 'lg'
-  fullWidth?: boolean
   children: React.ReactNode
   onClick: () => void
+  fullWidth?: boolean
 }
 
-const PrimaryButton = ({
+const OutlinedButton = ({
   children,
   onClick,
   size = 'md',
-  fullWidth = false,
+  fullWidth,
 }: Props) => {
   const buttonClass = useMemo(() => {
     switch (size) {
@@ -34,13 +34,14 @@ const PrimaryButton = ({
       type='button'
       onClick={onClick}
       className={classNames(
-        'w-full rounded-none border border-primary bg-primary px-5 py-2.5 text-center text-sm font-medium uppercase tracking-widest ring-offset-0 transition-all duration-100 hover:bg-primary-600 focus:mr-[1px] focus:ring-1 focus:ring-neutral-0',
+        'rounded-none border border-primary bg-neutral-900 px-5 py-2.5 text-center text-sm font-medium uppercase tracking-widest text-primary-500 ring-offset-0 transition-all duration-100 hover:bg-neutral-800 focus:ml-[1px] focus:ring-1 focus:ring-neutral-0',
         buttonClass,
         { 'w-full': fullWidth }
-      )}>
+      )}
+      style={{ color: '' }}>
       {children}
     </button>
   )
 }
 
-export default PrimaryButton
+export default OutlinedButton
