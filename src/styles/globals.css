@@ -1,6 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;1,400&family=Unbounded:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'overlock', sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-unbounded text-neutral-900 dark:text-neutral-0;
+  }
+}
+
+.body-1 {
+  @apply font-overlock text-base text-neutral-600 dark:text-neutral-50;
+}
+
+.body-2 {
+  @apply font-overlock text-body-2 text-neutral-600 dark:text-neutral-200;
+}
+
+.heading-font {
+  @apply font-unbounded text-neutral-900 dark:text-neutral-0;
+}
+
+.heading-1 {
+  @apply heading-font text-[1.25rem] font-bold leading-tight sm:text-[3rem];
+}
+.heading-2 {
+  @apply heading-font text-[1.5rem] font-bold leading-8 tracking-[.25px] sm:text-[2.125rem] sm:leading-[3rem];
+}
+.heading-3 {
+  @apply heading-font text-[1.5rem] font-bold leading-8;
+}
+
+.heading-4 {
+  @apply heading-font text-[1.25rem] font-bold;
+}
+
+.subtitle-1 {
+  @apply font-overlock text-subtitle-1 text-neutral-900 dark:text-neutral-50;
+}
+
+.subtitle-2 {
+  @apply font-overlock text-subtitle-2 text-neutral-900 dark:text-neutral-50;
+}
+
+.btn-3 {
+  @apply px-[3.75rem] py-4 font-overlock text-btn-1 text-neutral-900;
+}
+
+.btn-2 {
+  @apply px-[3.75rem] py-[.75rem] font-overlock text-btn-1 text-neutral-900;
+}
+
+.btn-1 {
+  @apply px-16 py-[.75rem] font-overlock text-btn-2 text-neutral-900;
+}
+
+.btn-xs {
+  @apply px-8 py-2 font-overlock text-btn-1 text-neutral-900;
+}
+
+.link {
+  @apply text-neutral-900 hover:text-link hover:underline dark:text-neutral-50;
+}
 
 * {
   box-sizing: border-box;
@@ -12,4 +82,85 @@
 html,
 body {
   max-width: 100vw;
+}
+
+/* Hamburger Menu */
+.hamburger-bar {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.hamburger-bar span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 16px;
+  border-radius: 9px;
+  opacity: 1;
+  left: 50%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg) translate(-50%, -50%);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.hamburger-bar span:nth-child(1) {
+  top: 14.5px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.hamburger-bar span:nth-child(2) {
+  top: 19.5px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.hamburger-bar span:nth-child(3) {
+  top: 24.5px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.hamburger-bar.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 13.5px;
+  width: 16.97px;
+  left: 35%;
+}
+
+.hamburger-bar.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.hamburger-bar.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 25.5px;
+  width: 16.97px;
+  left: 35%;
 }
