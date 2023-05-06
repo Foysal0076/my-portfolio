@@ -2,8 +2,8 @@ import OutlinedButton from '@/components/common/OutlinedButton'
 
 export const AboutMeSection = () => {
   return (
-    <>
-      <div className='lg:border-t-2 lg:border-b-2 lg:border-y-neutral-800'>
+    <div className='lg:pt-10'>
+      <div className='lg:border-t lg:border-b lg:border-y-neutral-800'>
         <div className='container max-w-5xl py-2 lg:bg-neutral-900 lg:py-10'>
           <div className='flex flex-col gap-4 lg:flex-row'>
             <div className='basis-3/12 text-center lg:text-left'>
@@ -65,6 +65,6 @@ export const AboutMeSection = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
