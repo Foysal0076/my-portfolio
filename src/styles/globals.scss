@@ -208,3 +208,9 @@
     transform: translate(-50%, -15%);
   }
 }
+
+.testimonial-slider {
+  .swiper-slide {
+    height: auto;
+  }
+}
