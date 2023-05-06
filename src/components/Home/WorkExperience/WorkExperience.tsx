@@ -89,7 +89,7 @@ export const WorkExperience = () => {
           <div className='flex flex-col gap-2 md:flex-row md:gap-8'>
             <div className='grow pb-4 md:basis-1/4 md:pb-8'>
               <ExperienceCompany
-                company='Launch a Project · Remote'
+                company='Launch a Project'
                 location='74 Agrabad C/A, Jahan Building 5, Chattogram, 4100'
                 from='Oct 2021'
                 to='Jun 2022'
@@ -204,7 +204,7 @@ export const WorkExperience = () => {
             <div className='experience-connect-line-1 ml-4 h-0  w-[1px] basis-[3rem] border-l border-dotted border-primary md:block' />
             <div className='pb-8'>
               <ExperienceCompany
-                company='Launch a Project · Remote'
+                company='Launch a Project'
                 location='74 Agrabad C/A, Jahan Building 5, Chattogram, 4100'
                 from='Oct 2021'
                 to='Jun 2022'
