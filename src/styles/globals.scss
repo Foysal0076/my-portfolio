@@ -33,9 +33,10 @@
         #ffffff 75%,
         #ffffff 100%
       );
-      animation: run 7s 0s infinite;
+      animation: run 10s 0s infinite;
       animation-fill-mode: forwards;
-      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+      // animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+      animation-timing-function: linear;
     }
 
     &:nth-child(1) {
@@ -90,7 +91,7 @@
       margin-left: 16.33%;
 
       &::after {
-        animation-delay: 3.5s;
+        animation-delay: 5.5s;
       }
     }
 
@@ -98,7 +99,7 @@
       margin-left: 27.22%;
 
       &::after {
-        animation-delay: 2.5s;
+        animation-delay: 6.5s;
       }
     }
 
@@ -106,7 +107,7 @@
       margin-left: 38.11%;
 
       &::after {
-        animation-delay: 2s;
+        animation-delay: 3s;
       }
     }
 
@@ -127,5 +128,90 @@
 
   100% {
     top: 110%;
+  }
+}
+
+// Experience side line style
+
+.experience-connect-line-1 {
+  position: relative;
+  margin-top: 30px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    border: 1px solid;
+    outline-width: 1px;
+    outline-style: dotted;
+    outline-offset: 8px;
+    @apply bg-primary;
+    @apply outline-primary;
+    border-radius: 50%;
+    transform: translate(-50%, -150%);
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 2rem;
+  }
+}
+
+.experience-connect-line-2 {
+  position: relative;
+  margin-top: 33px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    border: 1px solid;
+    outline-width: 1px;
+    outline-style: dotted;
+    outline-offset: 8px;
+    @apply bg-primary;
+    @apply outline-primary;
+    border-radius: 50%;
+    transform: translate(-50%, -150%);
+  }
+}
+
+.experience-connect-line-3 {
+  position: relative;
+  margin-top: 10px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    border: 1px solid;
+    outline-width: 1px;
+    outline-style: dotted;
+    outline-offset: 8px;
+    @apply bg-primary;
+    @apply outline-primary;
+    border-radius: 50%;
+    transform: translate(-50%, -15%);
+  }
+}
+
+.testimonial-slider,
+.portfolio-slider {
+  .swiper-slide {
+    height: auto;
   }
 }

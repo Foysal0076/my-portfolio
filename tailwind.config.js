@@ -54,6 +54,13 @@ module.exports = {
             fontWeight: '400',
           },
         ],
+        'caption-1': [
+          '.75rem',
+          {
+            lineHeight: '1rem',
+            fontWeight: '400',
+          },
+        ],
       },
       colors: {
         primary: '#FEBD02',
