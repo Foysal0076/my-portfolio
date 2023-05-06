@@ -72,6 +72,10 @@
   @apply text-neutral-900 hover:text-link hover:underline dark:text-neutral-50;
 }
 
+.caption-1 {
+  @apply font-overlock text-caption-1 text-neutral-900 dark:text-neutral-50;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

@@ -5,7 +5,10 @@ import { Autoplay, Navigation } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import Image from 'next/image'
+import {
+  LeftArrow45CircleIcon,
+  RightArrow45CircleIcon,
+} from '@/components/common/Icons'
 
 type Testimonial = {
   author: string
@@ -51,24 +54,10 @@ const TestimonialSection = () => {
         <div className='testimonial-slider relative mt-14 md:mt-10'>
           <div className='container hidden max-w-7xl justify-end gap-4 pb-6 md:flex'>
             <div id='prev-btn-slider' className='cursor-pointer'>
-              <div className='flex h-8 w-8 items-center justify-center rounded-full bg-primary'>
-                <Image
-                  src='/assets/images/arrow-left-45.svg'
-                  alt='arrow-left'
-                  width={12}
-                  height={8}
-                />
-              </div>
+              <LeftArrow45CircleIcon />
             </div>
             <div id='next-btn-slider' className='cursor-pointer'>
-              <div className='flex h-8 w-8 items-center justify-center rounded-full bg-primary'>
-                <Image
-                  src='/assets/images/arrow-right-45.svg'
-                  alt='arrow-right'
-                  width={12}
-                  height={8}
-                />
-              </div>
+              <RightArrow45CircleIcon />
             </div>
           </div>
           <Swiper
@@ -120,24 +109,10 @@ const TestimonialSection = () => {
           </Swiper>
           <div className='container flex max-w-7xl justify-center gap-4 pt-6 md:hidden'>
             <div id='prev-btn-slider' className='cursor-pointer'>
-              <div className='flex h-8 w-8 items-center justify-center rounded-full bg-primary'>
-                <Image
-                  src='/assets/images/arrow-left-45.svg'
-                  alt='arrow-left'
-                  width={12}
-                  height={8}
-                />
-              </div>
+              <LeftArrow45CircleIcon />
             </div>
             <div id='next-btn-slider' className='cursor-pointer'>
-              <div className='flex h-8 w-8 items-center justify-center rounded-full bg-primary'>
-                <Image
-                  src='/assets/images/arrow-right-45.svg'
-                  alt='arrow-right'
-                  width={12}
-                  height={8}
-                />
-              </div>
+              <RightArrow45CircleIcon />
             </div>
           </div>
         </div>
