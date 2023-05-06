@@ -8,7 +8,7 @@ export const ServiceSection = () => {
         <ServiceHeader />
         <ul
           role='list'
-          className='mt-14 mb-6 flex flex-col flex-wrap  justify-center gap-6 md:flex-row md:gap-8 lg:mb-8 lg:mt-16'>
+          className='mt-14 flex flex-col flex-wrap  justify-center gap-6 md:flex-row md:gap-8 lg:mt-16'>
           <ServiceCard
             title='Web Design'
             description='Design is something magical to us, and I consider myself lucky to be able to get creative and build new websites.'
