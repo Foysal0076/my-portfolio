@@ -40,7 +40,7 @@ const HeroSection = () => {
               GOT A PROJECT?
             </PrimaryButton>
             <OutlinedButton size='xs' onClick={onLetsTalkButtonClick} fullWidth>
-              LET&apos; TALK
+              LET&apos;S TALK
             </OutlinedButton>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { AboutMeSection } from '@/components/Home/AboutMe'
 import HeroSection from '@/components/Home/HeroSection'
 
 const HomeBlock = () => {
@@ -5,8 +6,8 @@ const HomeBlock = () => {
     <div>
       {/* Hero Section */}
       <HeroSection />
-      {/* Hero section contact */}
       {/* About me */}
+      <AboutMeSection />
       {/* Basic overview cards */}
       {/* Services I offer */}
       {/* My work experience */}
