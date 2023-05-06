@@ -45,7 +45,7 @@
 }
 
 .subtitle-1 {
-  @apply font-overlock text-subtitle-1 text-neutral-900 dark:text-neutral-50;
+  @apply font-unbounded text-subtitle-1 text-neutral-900 dark:text-neutral-50;
 }
 
 .subtitle-2 {
