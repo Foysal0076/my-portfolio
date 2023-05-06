@@ -1,5 +1,6 @@
 import { AboutMeSection } from '@/components/Home/AboutMe'
 import HeroSection from '@/components/Home/HeroSection'
+import { ServiceSection } from '@/components/Home/Services'
 
 const HomeBlock = () => {
   return (
@@ -8,8 +9,8 @@ const HomeBlock = () => {
       <HeroSection />
       {/* About me */}
       <AboutMeSection />
-      {/* Basic overview cards */}
       {/* Services I offer */}
+      <ServiceSection />
       {/* My work experience */}
       {/* My certificates */}
       {/* My projects */}
