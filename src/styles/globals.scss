@@ -14,8 +14,10 @@
     height: 100%;
     top: 0;
     left: 50%;
-    background: #252525;
+    // background: var(--line-color);
     overflow: hidden;
+
+    @apply bg-neutral-800;
 
     &::after {
       content: '';
