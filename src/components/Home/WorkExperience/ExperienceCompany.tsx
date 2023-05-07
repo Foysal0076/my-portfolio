@@ -34,6 +34,7 @@ export const ExperienceCompany = ({
           src={logo}
           alt={company}
           className='h-14 w-14'
+          quality={100}
         />
         <div className='flex flex-col gap-1'>
           <p className='body-2 max-w-[14.5rem]'>{location}</p>
