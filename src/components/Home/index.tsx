@@ -3,6 +3,7 @@ import { CertificateSection } from '@/components/Home/Certificates/CertificateSe
 import HeroSection from '@/components/Home/HeroSection'
 import { PortfolioSection } from '@/components/Home/Portfolio'
 import { ServiceSection } from '@/components/Home/Services'
+import { ShallWeChatSection } from '@/components/Home/ShallWeChat'
 // import { TestimonialSection } from '@/components/Home/Testimonials'
 import { WorkExperience } from '@/components/Home/WorkExperience'
 import dynamic from 'next/dynamic'
@@ -31,6 +32,7 @@ const HomeBlock = () => {
       {/* Testimonials */}
       <TestiMonial />
       {/* Chat Banner */}
+      <ShallWeChatSection />
       {/* My Articles / writings */}
     </div>
   )

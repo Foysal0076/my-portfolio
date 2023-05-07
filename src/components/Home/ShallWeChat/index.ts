@@ -1,0 +1,1 @@
+export { ShallWeChatSection } from './ShallWeChatSection'
