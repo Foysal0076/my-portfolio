@@ -215,3 +215,15 @@
     height: auto;
   }
 }
+
+.portfolio-filter-slider {
+  overflow-x: scroll !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

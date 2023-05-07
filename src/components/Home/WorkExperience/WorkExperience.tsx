@@ -40,7 +40,7 @@ export const WorkExperience = () => {
                 location='Fortune Business Centre, Kaspate Wasti, Wakad, Pune: 411057. Maharashtra, India.'
                 from='May 2016'
                 to='Dec 2022'
-                logo='/assets/images/decode-logo.png'
+                logo='/assets/images/deqode-logo.png'
                 isRemote
               />
             </div>
@@ -158,7 +158,7 @@ export const WorkExperience = () => {
                 location='Fortune Business Centre, Kaspate Wasti, Wakad, Pune: 411057. Maharashtra, India.'
                 from='May 2016'
                 to='Dec 2022'
-                logo='/assets/images/decode-logo.png'
+                logo='/assets/images/deqode-logo.png'
                 isRemote
               />
               <h3 className='heading-4 mb-2'>UI/UX Designer</h3>

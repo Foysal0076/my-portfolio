@@ -1,4 +1,5 @@
 import { PortfolioCard } from '@/components/Home/Portfolio/PortfolioCard'
+import PortfolioFilterSlider from '@/components/Home/Portfolio/PortfolioFilterSlider'
 import OutlinedButton from '@/components/common/OutlinedButton'
 import SectionHeader from '@/components/common/SectionHeader'
 import dynamic from 'next/dynamic'
@@ -108,12 +109,6 @@ export const PortfolioSection = () => {
 
   const PortfolioSlider = dynamic(
     () => import('@/components/Home/Portfolio/PortfolioSlider'),
-    {
-      ssr: false,
-    }
-  )
-  const PortfolioFilterSlider = dynamic(
-    () => import('@/components/Home/Portfolio/PortfolioFilterSlider'),
     {
       ssr: false,
     }
