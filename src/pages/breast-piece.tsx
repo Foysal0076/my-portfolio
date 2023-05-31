@@ -1,17 +1,23 @@
+import OutlinedButton from '@/components/common/OutlinedButton'
 import PrimaryButton from '@/components/common/PrimaryButton'
 import classNames from 'classnames'
 import { useState } from 'react'
 
 const selectWinners = (contestants: string[], numWinners: number) => {
   // Create an array to store the winners.
-  const winners = []
+  const winners: string[] = []
 
   // Loop through the contestants.
   for (let i = 0; i < numWinners; i++) {
     // Generate a random number between 0 to numWinners.
     const randomNumber = Math.floor(Math.random() * contestants.length)
 
-    // If the random number is less than or equal to the number of winners,
+    const alreadyExists = winners.includes(contestants[randomNumber])
+    if (alreadyExists) {
+      console.log('already exists')
+      i--
+      continue
+    }
     // add the contestant to the winners array.
     winners.push(contestants[randomNumber])
   }
@@ -28,6 +34,12 @@ const WhoGetsTheBreastPiece = () => {
   const [name, setName] = useState<string>('')
 
   const onAdd = () => {
+    if (!name) return
+    // if already exists, don't add
+    if (contestants.includes(name)) {
+      setName('')
+      return
+    }
     const newContestants = [...contestants, name]
     setContestants(newContestants)
     setName('')
@@ -41,6 +53,7 @@ const WhoGetsTheBreastPiece = () => {
 
   const handleWinnerCountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // validation to take only positive numbers
+    console.log(e.target.value)
     if (parseInt(e.target.value) < 0) {
       setWinnerCount(0)
     } else if (parseInt(e.target.value) >= contestants.length) {
@@ -59,7 +72,7 @@ const WhoGetsTheBreastPiece = () => {
   return (
     <div>
       <div className='container'>
-        <h1 className='heading-3 mb-16 text-center'>
+        <h1 className='heading-3 mb-16 pt-16 text-center'>
           Who Gets the Breast Piece?
         </h1>
 
@@ -98,15 +111,15 @@ const WhoGetsTheBreastPiece = () => {
                 stroke='currentColor'>
                 <path
                   d='M21 11.5C21 16.1944 16.1944 21 11.5 21C6.80558 21 2 16.1944 2 11.5C2 6.80558 6.80558 2 11.5 2C16.1944 2 21 6.80558 21 11.5Z'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                 />
                 <path
                   d='M15.5 15.5L19.5 19.5'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                 />
               </svg>
             </div>
@@ -127,10 +140,13 @@ const WhoGetsTheBreastPiece = () => {
           <div className='relative'>
             <input
               type='number'
+              min={1}
+              defaultValue={1}
+              max={contestants.length - 1}
               className='px- w-full rounded-md border border-gray-300 bg-gray-100 py-2 pl-8 text-lg text-gray-900 focus:border-primary-500 focus:outline-none focus:ring focus:ring-primary-400'
               placeholder='Enter number of winners'
               onChange={handleWinnerCountChange}
-              value={winnerCount}
+              disabled={contestants.length < 2}
             />
             <div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
               <svg
@@ -140,15 +156,15 @@ const WhoGetsTheBreastPiece = () => {
                 stroke='currentColor'>
                 <path
                   d='M21 11.5C21 16.1944 16.1944 21 11.5 21C6.80558 21 2 16.1944 2 11.5C2 6.80558 6.80558 2 11.5 2C16.1944 2 21 6.80558 21 11.5Z'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                 />
                 <path
                   d='M15.5 15.5L19.5 19.5'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
                 />
               </svg>
             </div>
@@ -168,11 +184,12 @@ const WhoGetsTheBreastPiece = () => {
         {/* Tailwind button to choose winners */}
         <div
           className={classNames(
-            'mx-auto mt-8 flex w-full max-w-md flex-col items-center justify-center'
+            'mx-auto mt-8 flex w-full max-w-md flex-col items-center justify-center',
+            { hidden: contestants.length === 0 }
           )}>
-          <PrimaryButton size='sm' fullWidth={true} onClick={reset}>
+          <OutlinedButton size='sm' fullWidth={true} onClick={reset}>
             Reset
-          </PrimaryButton>
+          </OutlinedButton>
         </div>
 
         {/* Tailwind design to show the added persons in a list */}
