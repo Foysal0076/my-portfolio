@@ -16,9 +16,9 @@ const Navbar = () => {
   }
 
   return (
-    <div className='fixed top-0 z-30 min-h-0 w-full'>
+    <div className='sticky top-0 z-30 min-h-0 w-full border-b border-neutral-800 shadow-2xl backdrop-blur-xl'>
       <div className='container relative h-full max-w-screen-xl'>
-        <nav className='flex h-full items-center border-red-400 py-4 text-primary lg:justify-between lg:py-6'>
+        <nav className='flex h-full items-center border-red-400 py-4 text-primary lg:justify-between lg:py-4'>
           {/* If there is any space in font name, add underscore instead of space */}
           <span className='heading-4 flex items-center lg:h-auto'>
             Mosharrof
